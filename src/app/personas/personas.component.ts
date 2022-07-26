@@ -18,11 +18,11 @@ export class PersonasComponent implements OnInit {
               }
 
   ngOnInit(): void {
-    this.personas = this.personasService.personas
+    this.personas = this.personasService.personas;
   }
 
   agregar() {
-    this.router.navigate(['personas/agregar'])
+    this.router.navigate(['personas/agregar']);
   }
 
 }
