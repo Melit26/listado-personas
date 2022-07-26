@@ -1,4 +1,4 @@
-import { PersonasService } from './personas.service';
+import { PersonasService } from './persona.service';
 import { LoggingService } from './LoggingService.service';
 import { Component, enableProdMode, OnInit } from '@angular/core';
 import { Persona } from './persona.model';

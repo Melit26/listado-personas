@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { PersonaComponent } from './personas/persona/persona.component';
 import { FormularioComponent } from './personas/formulario/formulario.component';
 import { LoggingService } from './LoggingService.service';
-import { PersonasService } from './personas.service';
+import { PersonasService } from './persona.service';
 import { AppRoutingModule } from './app-routing.module';
 import { PersonasComponent } from './personas/personas.component';
 
@@ -24,6 +24,5 @@ import { PersonasComponent } from './personas/personas.component';
   ],
   providers: [LoggingService, PersonasService],
   bootstrap: [AppComponent]
-
 })
 export class AppModule { }
