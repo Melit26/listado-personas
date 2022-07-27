@@ -1,7 +1,4 @@
-import { PersonasService } from './persona.service';
-import { LoggingService } from './LoggingService.service';
-import { Component, enableProdMode, OnInit } from '@angular/core';
-import { Persona } from './persona.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',

@@ -21,7 +21,7 @@ export class PersonasComponent implements OnInit {
     this.personas = this.personasService.personas;
   }
 
-  agregar() {
+  agregar(){
     this.router.navigate(['personas/agregar']);
   }
 
