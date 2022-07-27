@@ -27,5 +27,16 @@ export class DataServices{
                 response => console.log("resultado modificar Persona: " + response)
             ,   error => console.log("Error en modificar Persona: " + error)
             )
-      }
+    }
+
+    eliminarPersona(index: number){
+      let url:string;
+      url = 'https://listado-personas-c3fc7-default-rtdb.firebaseio.com/datos/' + index + '.json';
+      this.httpClient.delete(url)
+          .subscribe(
+              response => console.log("resultado eliminar Persona: " + response)
+          ,   error => console.log("Error en eliminar Persona: " + error)
+          )
+    }
+
   }

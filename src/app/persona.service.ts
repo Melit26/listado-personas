@@ -42,4 +42,19 @@ export class PersonasService {
     persona1.apellido = persona.apellido;
     this.dataServices.modificarPersona(index, persona);
   }
+
+  eliminarPersona(index:number){
+      this.personas.splice(index,1);
+      this.dataServices.eliminarPersona(index);
+      //Se vuelve a guardar el arreglo para regenerar los indices
+      this.modificarPersonas();
+  }
+
+  modificarPersonas(){
+    if(this.personas != null){
+        this.dataServices.guardarPersonas(this.personas)
+    }
+  }
 }
+
+

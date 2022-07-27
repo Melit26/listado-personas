@@ -12,8 +12,6 @@ export class PersonaComponent implements OnInit {
   @Input() persona: Persona;
   @Input() indice: number;
 
-  constructor(private personasService:PersonasService) { }
-
   ngOnInit(): void {
   }
 
