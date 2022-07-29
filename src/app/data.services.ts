@@ -1,13 +1,17 @@
+import { LoginService } from './login/login.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Persona } from './persona.model';
 
 @Injectable()
 export class DataServices{
-    constructor(private httpClient: HttpClient){}
+    constructor(private httpClient: HttpClient,
+                private loginService: LoginService
+      ){}
 
     cargarPersonas(){
-        return this.httpClient.get<Persona[]>('https://listado-personas-c3fc7-default-rtdb.firebaseio.com/datos.json');
+        const token = this.loginService.getIdToken();
+        return this.httpClient.get<Persona[]>('https://listado-personas-c3fc7-default-rtdb.firebaseio.com/datos.json?auth=' + token);
     }
 
     //Guardar Personas
